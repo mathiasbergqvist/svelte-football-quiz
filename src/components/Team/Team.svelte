@@ -1,7 +1,9 @@
 <script>
-  export let team;
+  import { beforeUpdate } from "svelte";
 
-  let score = 0;
+  export let team;
+  import { score, round } from "../../store";
+  import { correctTeamScore } from "./helpers";
 
   let answerManager = "";
   let answerArena = "";
@@ -15,7 +17,11 @@
       answerPlayers,
       team
     );
-    score += teamScore;
+    score.update((value) => value + teamScore);
+    round.update((value) => value + 1);
+    answerManager = "";
+    answerArena = "";
+    answerPlayers = [];
   };
 </script>
 
