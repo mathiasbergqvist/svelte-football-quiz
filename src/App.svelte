@@ -1,7 +1,7 @@
 <script>
-  import { Route, Router, Link } from "svelte-routing";
-  import Home from "./views/Home.svelte";
+  import { Route, Router } from "svelte-routing";
   import Game from "./views/Game.svelte";
+  import Home from "./views/Home.svelte";
   import Scoreboard from "./views/Scoreboard.svelte";
 
   export let url = "";
