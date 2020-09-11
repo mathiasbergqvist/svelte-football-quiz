@@ -1,5 +1,6 @@
 <script>
   import { data } from "../../data";
+  import {correctTeamScore} from './helpers';
   let score = 0;
 
   let answerManager = '';
@@ -8,9 +9,8 @@
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('answerManager', answerManager);
-    console.log('answerArena', answerArena);
-    console.log('answerPlayers', answerPlayers);
+    const teamScore = correctTeamScore(answerManager, answerArena, answerPlayers, data[0]);
+    score+= teamScore;
   };
 
 </script>
@@ -27,5 +27,6 @@
       {player.position}</label>
     <input type="text" name={`player-${i}`} bind:value={answerPlayers[i]} />
   {/each}
-  <button type="Submit">Send</button>
+  <button type="Submit">Submit answers</button>
+  <div>Score: {score}</div>
 </form>
