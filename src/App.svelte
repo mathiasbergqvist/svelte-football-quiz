@@ -1,6 +1,6 @@
 <script>
   import { Route, Router } from "svelte-routing";
-  import Game from "./views/Game.svelte";
+  import Game from "./views/Game/Game.svelte";
   import Home from "./views/Home.svelte";
   import Scoreboard from "./views/Scoreboard.svelte";
 
