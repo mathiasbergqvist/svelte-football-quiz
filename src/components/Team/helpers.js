@@ -9,33 +9,28 @@ const isCorrectSpelling = (string1, string2) => {
     return levenScore <= 3;
 };
 
-const isCorrectPlayer = (answerPlayer, correctAnswerPlayer) => (
-    isCorrectSpelling(answerPlayer, correctAnswerPlayer)
-);
+const isCorrectPlayer = (answerPlayer, correctAnswerPlayer) =>
+    isCorrectSpelling(answerPlayer, correctAnswerPlayer);
 
-const isCorrectManager = (answerManager, team) => (
-    isCorrectSpelling(answerManager, team.manager)
-);
+const isCorrectManager = (answerManager, team) => isCorrectSpelling(answerManager, team.manager);
 
-const isCorrectArena = (answerArena, team) => (
-    isCorrectSpelling(answerArena, team.arena)
-); 
+const isCorrectArena = (answerArena, team) => isCorrectSpelling(answerArena, team.arena);
 
 export const correctTeamScore = (answerManager, answerArena, answerPlayers, team) => {
     let score = 0;
     if (isCorrectManager(answerManager, team)) {
-        score+= CORRECT_ANSWER_POINTS;
+        score += CORRECT_ANSWER_POINTS;
     }
 
     if (isCorrectArena(answerArena, team)) {
-        score+= CORRECT_ANSWER_POINTS;
+        score += CORRECT_ANSWER_POINTS;
     }
 
     answerPlayers.forEach((player, i) => {
-        if(isCorrectPlayer(player, team.players[i].name)) {
+        if (isCorrectPlayer(player, team.players[i].name)) {
             score += CORRECT_ANSWER_POINTS;
         }
     });
-    
+
     return score;
 };

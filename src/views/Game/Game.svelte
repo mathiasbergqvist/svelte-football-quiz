@@ -7,7 +7,7 @@
   import { onMount } from "svelte";
 
   onMount(() => {
-    gameOngoing.update(value => true);
+    gameOngoing.update((value) => true);
   });
 </script>
 

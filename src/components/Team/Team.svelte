@@ -25,7 +25,7 @@
 
     // Game over?
     if ($round === noOfTeams) {
-      gameOngoing.update(value => false);
+      gameOngoing.update((value) => false);
     }
 
     answerManager = "";
