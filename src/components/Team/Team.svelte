@@ -1,9 +1,10 @@
 <script>
-  import { beforeUpdate } from "svelte";
+  import { beforeUpdate, onMount } from "svelte";
+  import { score, round, gameOngoing } from "../../store";
+  import { correctTeamScore } from "./helpers";
 
   export let team;
-  import { score, round } from "../../store";
-  import { correctTeamScore } from "./helpers";
+  export let noOfTeams;
 
   let answerManager = "";
   let answerArena = "";
@@ -17,8 +18,16 @@
       answerPlayers,
       team
     );
+
+    // Update score and round
     score.update((value) => value + teamScore);
     round.update((value) => value + 1);
+
+    // Game over?
+    if ($round === noOfTeams) {
+      gameOngoing.update(value => false);
+    }
+
     answerManager = "";
     answerArena = "";
     answerPlayers = [];
