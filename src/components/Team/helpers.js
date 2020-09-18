@@ -2,14 +2,14 @@ import leven from 'leven';
 
 export const CORRECT_ANSWER_POINTS = 100;
 
-const isCorrectSpelling = (string1, string2) => {
+export const isCorrectSpelling = (string1, string2) => {
     const trimmedString1 = string1.toLowerCase().trim();
     const trimmedString2 = string2.toLowerCase().trim();
     const levenScore = leven(trimmedString1, trimmedString2);
     return levenScore <= 3;
 };
 
-const isCorrectPlayer = (answerPlayer, correctAnswerPlayer) =>
+export const isCorrectPlayer = (answerPlayer, correctAnswerPlayer) =>
     isCorrectSpelling(answerPlayer, correctAnswerPlayer);
 
 const isCorrectManager = (answerManager, team) => isCorrectSpelling(answerManager, team.manager);
