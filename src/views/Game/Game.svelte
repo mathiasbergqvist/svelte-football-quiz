@@ -1,5 +1,4 @@
 <script>
-  import { data } from "../../data";
   import { correctTeamScore } from "../../components/Team/helpers";
   import Team from "../../components/Team/Team.svelte";
   import GameOver from "../../components/GameOver/GameOver.svelte";
@@ -10,7 +9,7 @@
 
   onMount(async () => {
     // Load temas from DB
-    const res = await fetch("http://localhost:4004/teams");
+    const res = await fetch(`${API_ENDPOINT}/teams`);
     teams = await res.json();
 
     // Start game state

@@ -3,6 +3,10 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
+import replace from '@rollup/plugin-replace';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -44,6 +48,9 @@ export default {
             css: (css) => {
                 css.write('bundle.css');
             },
+        }),
+        replace({
+            API_ENDPOINT: JSON.stringify(process.env.API_ENDPOINT),
         }),
 
         // If you have external dependencies installed from
