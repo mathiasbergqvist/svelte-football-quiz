@@ -6,15 +6,24 @@
   import { score, round, gameOngoing } from "../../store";
   import { onMount } from "svelte";
 
-  onMount(() => {
+  let teams = [];
+
+  onMount(async () => {
+    // Load temas from DB
+    const res = await fetch("http://localhost:4004/teams");
+    teams = await res.json();
+
+    // Start game state
     gameOngoing.update((value) => true);
   });
 </script>
 
 {#if !$gameOngoing}
   <GameOver />
+{:else if teams}
+  <h1>Team {$round + 1} of {teams.length}</h1>
+  <Team team={teams[$round]} noOfTeams={teams.length} />
 {:else}
-  <h1>Team {$round + 1} of {data.length}</h1>
-  <Team team={data[$round]} noOfTeams={data.length} />
+  <h2>Loading teams data</h2>
 {/if}
 <div>Score: {$score}</div>
