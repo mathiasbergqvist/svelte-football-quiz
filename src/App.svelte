@@ -18,6 +18,8 @@ import { Route, Router } from 'svelte-routing';
 import Game from './views/Game/Game.svelte';
 import Home from './views/Home.svelte';
 import Scoreboard from './views/Scoreboard.svelte';
+import TeamTrial from './views/TeamTrial/TeamTrial.svelte';
+import Trial from './views/Trial/Trial.svelte';
 
 export let url = '';
 </script>
@@ -27,6 +29,10 @@ export let url = '';
         <div>
             <Route path="game" component="{Game}" />
             <Route path="scoreboard" component="{Scoreboard}" />
+            <Route path="trial/:id" let:params>
+                <TeamTrial id="{params.id}" />
+            </Route>
+            <Route path="trial" component="{Trial}" />
             <Route path="/">
                 <Home />
             </Route>
