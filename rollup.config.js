@@ -52,6 +52,8 @@ export default {
         }),
         replace({
             API_ENDPOINT: JSON.stringify(process.env.API_ENDPOINT),
+            BASIC_AUTH_USERNAME: JSON.stringify(process.env.BASIC_AUTH_USERNAME),
+            BASIC_AUTH_PASSWORD: JSON.stringify(process.env.BASIC_AUTH_PASSWORD),
         }),
 
         // If you have external dependencies installed from

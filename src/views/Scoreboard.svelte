@@ -13,11 +13,15 @@
 
 <script>
 import { onMount } from 'svelte';
+import { getAuthHeaders } from '../auth';
 
 let scoreboardData = [];
 
 onMount(async () => {
-    const res = await fetch(`${API_ENDPOINT}/scores`);
+    const res = await fetch(`${API_ENDPOINT}/scores`, {
+        method: 'GET',
+        headers: getAuthHeaders(),
+    });
     const resJson = await res.json();
     scoreboardData = resJson.sort((a, b) => a.score - b.score).reverse();
 });

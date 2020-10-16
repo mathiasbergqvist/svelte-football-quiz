@@ -7,7 +7,10 @@ let team = null;
 
 onMount(async () => {
     // Load temas from DB
-    const res = await fetch(`${API_ENDPOINT}/teams/${id}`);
+    const res = await fetch(`${API_ENDPOINT}/teams/${id}`, {
+        method: 'GET',
+        headers: getAuthHeaders(),
+    });
     team = await res.json();
 });
 </script>

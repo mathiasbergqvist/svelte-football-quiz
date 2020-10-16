@@ -7,6 +7,7 @@ span {
 <script>
 import { score, round } from '../../store';
 import { navigate } from 'svelte-routing';
+import { getAuthHeaders } from '../../auth';
 
 let playerName = '';
 
@@ -28,6 +29,7 @@ const submitScore = () => {
         headers: {
             'Content-Type': 'application/json',
         },
+        headers: getAuthHeaders(),
         body: JSON.stringify(scoreBoardEntry),
     })
         .then((res) => {

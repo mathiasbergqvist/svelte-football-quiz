@@ -9,12 +9,16 @@ section {
 import { onMount } from 'svelte';
 import { navigate } from 'svelte-routing';
 import { List } from 'smelte';
+import { getAuthHeaders } from '../../auth';
 
 let teams = [];
 
 onMount(async () => {
     // Load temas from DB
-    const res = await fetch(`${API_ENDPOINT}/teams`);
+    const res = await fetch(`${API_ENDPOINT}/teams`, {
+        method: 'GET',
+        headers: getAuthHeaders(),
+    });
     teams = await res.json();
 });
 
