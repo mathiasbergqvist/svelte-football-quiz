@@ -1,111 +1,187 @@
+<style>
+h2 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.players-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.form-input {
+    width: 30%;
+    margin: 15px;
+}
+.manager-arena-input {
+    width: 100%;
+}
+.manager-arena {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 350px;
+}
+.button-wrapper {
+    width: 350px;
+    margin: 0 auto;
+}
+</style>
+
 <script>
-  import { beforeUpdate, onMount } from "svelte";
-  import { score, round, gameOngoing } from "../../store";
-  import { correctTeamScore, isCorrectSpelling } from "./helpers";
+import { navigate } from 'svelte-routing';
 
-  export let team;
-  export let noOfTeams;
+import { gameOngoing, round, score } from '../../store';
+import { correctTeamScore, isCorrectSpelling } from './helpers';
+import { TextField, Button } from 'smelte';
 
-  let answerManager = "";
-  let answerArena = "";
-  let answerPlayers = [];
-  let correctionMode = false;
+export let team;
+export let noOfTeams;
+export let isTrial = false;
 
-  const handleSubmit = (e) => {
+let answerManager = '';
+let answerArena = '';
+let answerPlayers = [];
+let correctionMode = false;
+
+const handleSubmit = (e) => {
     e.preventDefault();
     if (correctionMode) {
-      startNextRound();
+        if (isTrial) {
+            navigate('/trial', { replace: true });
+        } else {
+            startNextRound();
+        }
     } else {
-      correctScore();
+        correctScore();
     }
-  };
+};
 
-  const correctScore = (e) => {
-    const teamScore = correctTeamScore(
-      answerManager,
-      answerArena,
-      answerPlayers,
-      team
-    );
+const correctScore = (e) => {
+    const teamScore = correctTeamScore(answerManager, answerArena, answerPlayers, team);
 
-    // Update score and round
-    score.update((value) => value + teamScore);
+    if (!isTrial) {
+        // Update score and round
+        score.update((value) => value + teamScore);
+    }
 
     //Toggle correction mode
     correctionMode = true;
-  };
+};
 
-  const startNextRound = () => {
+const startNextRound = () => {
     round.update((value) => value + 1);
 
     //Re-set all states
-    answerManager = "";
-    answerArena = "";
+    answerManager = '';
+    answerArena = '';
     answerPlayers = [];
     correctionMode = false;
 
     // Game over?
     if ($round === noOfTeams) {
-      gameOngoing.update((value) => false);
+        gameOngoing.update((value) => false);
     }
-  };
+};
 
-  const getInputStyling = (shouldStyle, value, player) => {
+const getInputStyling = (shouldStyle, value, player) => {
     if (!shouldStyle) {
-      return "";
+        return '';
     }
 
-    if (
-      value !== undefined &&
-      player !== undefined &&
-      isCorrectSpelling(value, player)
-    ) {
-      return "border: 4px solid #28cc1d";
+    if (value !== undefined && player !== undefined && isCorrectSpelling(value, player)) {
+        return 'border: 4px solid #64dd17; background: #76ff03';
     }
 
-    return "border: 4px solid #ff3c36";
-  };
+    return 'border: 4px solid #bf360c; background: #d84315;';
+};
+
+const getBorderTheme = (shouldStyle, value, player) => {
+    if (!shouldStyle) {
+        return 'secondary';
+    }
+
+    if (value !== undefined && player !== undefined && isCorrectSpelling(value, player)) {
+        return 'success';
+    }
+
+    return 'error';
+};
 </script>
 
 {#if team !== undefined}
-  <h2>{team.name}</h2>
-  <form on:submit={handleSubmit}>
-    <label for="manager">Manager</label>
-    <input
-      type="text"
-      name="manager"
-      bind:value={answerManager}
-      disabled={correctionMode}
-      style={getInputStyling(correctionMode, answerManager, team.manager)} />
-    {#if correctionMode}
-      <div>{team.manager}</div>
-    {/if}
-    <label for="arena">Arena</label>
-    <input
-      type="text"
-      name="arena"
-      bind:value={answerArena}
-      style={getInputStyling(correctionMode, answerArena, team.arena)}
-      disabled={correctionMode} />
-    {#if correctionMode}
-      <div>{team.arena}</div>
-    {/if}
-    {#each team.players as player, i}
-      <label for={`player-${i}`}>{player.number}
-        <span>{player.county}</span>
-        {player.position}</label>
-      <input
-        type="text"
-        name={`player-${i}`}
-        bind:value={answerPlayers[i]}
-        disabled={correctionMode}
-        style={getInputStyling(correctionMode, answerPlayers[i], player.name)} />
-      {#if correctionMode}
-        <div>{player.name}</div>
-      {/if}
-    {/each}
-    {#if correctionMode}
-      <button type="Submit">Next round</button>
-    {:else}<button type="Submit">Submit answers</button>{/if}
-  </form>
+    <h2>{team.name}</h2>
+    <form on:submit="{handleSubmit}" autocomplete="off">
+        <div class="manager-arena">
+            <div class="manager-arena-input">
+                <TextField
+                    label="Manager"
+                    autocomplete="off"
+                    bind:value="{answerManager}"
+                    disabled="{correctionMode}"
+                />
+                {#if correctionMode}
+                    <div style="{getInputStyling(correctionMode, answerManager, team.manager)}">
+                        {team.manager}
+                    </div>
+                {/if}
+            </div>
+            <div class="manager-arena-input">
+                <TextField
+                    label="Arena"
+                    autocomplete="off"
+                    bind:value="{answerArena}"
+                    disabled="{correctionMode}"
+                />
+                {#if correctionMode}
+                    <div style="{getInputStyling(correctionMode, answerManager, team.manager)}">
+                        {team.arena}
+                    </div>
+                {/if}
+            </div>
+        </div>
+        <div class="players-container">
+            {#each team.players as player, i}
+                <div class="form-input">
+                    <label for="{`player-${i}`}">{player.number}
+                        <span>{player.county}</span>
+                        {player.position}</label>
+                    <TextField
+                        class="form-input"
+                        label="Player"
+                        autocomplete="off"
+                        bind:value="{answerPlayers[i]}"
+                        disabled="{correctionMode}"
+                    />
+                    {#if correctionMode}
+                        <div
+                            style="{getInputStyling(correctionMode, answerPlayers[i], player.name)}"
+                        >
+                            {player.name}
+                        </div>
+                    {/if}
+                </div>
+            {/each}
+        </div>
+        {#if correctionMode && !isTrial}
+            <div class="button-wrapper">
+                <Button type="Submit">Next round</Button>
+            </div>
+        {:else if correctionMode && isTrial}
+            <div class="button-wrapper">
+                <Button type="Submit">End trial</Button>
+            </div>
+        {:else}
+            <div class="button-wrapper">
+                <Button type="Submit">Submit answers</Button>
+            </div>
+        {/if}
+    </form>
 {/if}
