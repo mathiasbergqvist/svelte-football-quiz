@@ -1,6 +1,15 @@
+<style>
+section {
+    width: 1200px;
+    margin: 0 auto;
+}
+</style>
+
 <script>
 import { onMount } from 'svelte';
 import { navigate } from 'svelte-routing';
+import { List } from 'smelte';
+
 let teams = [];
 
 onMount(async () => {
@@ -14,9 +23,16 @@ const startTrial = (id) => {
 };
 </script>
 
-<h1>Team trial</h1>
-{#each teams as team}
-    <div><button on:click="{(e) => startTrial(team.id)}"> {team.name} </button></div>
-{:else}
-    <h3>Loading teams...</h3>
-{/each}
+<section>
+    <h1>Team trial</h1>
+    <List items="{teams}">
+        <li slot="item" let:item="{team}">
+            <div
+                class="cursor-pointer p-4 border-alert-50 border my-2 border-solid"
+                on:click="{(e) => startTrial(team.id)}"
+            >
+                {team.name}
+            </div>
+        </li>
+    </List>
+</section>
