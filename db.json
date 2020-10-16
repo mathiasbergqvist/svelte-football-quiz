@@ -4,58 +4,1035 @@
             "id": 0,
             "name": "Mathias",
             "score": 100
+        },
+        {
+            "name": "Ziggy",
+            "score": 200,
+            "id": 5
+        },
+        {
+            "name": "Ozzy",
+            "score": 600,
+            "id": 6
+        },
+        {
+            "name": "Lemmy",
+            "score": 400,
+            "id": 7
+        },
+        {
+            "name": "Mathias",
+            "score": 8100,
+            "id": 8
+        },
+        {
+            "name": "Mathias",
+            "score": 8500,
+            "id": 9
         }
     ],
     "teams": [
         {
             "id": 0,
-            "name": "Manchester United",
-            "manager": "Ole-Gunnar",
-            "arena": "Old Trafford",
+            "name": "Arsenal",
+            "manager": "Arteta",
+            "arena": "Emirates Stadium",
             "players": [
                 {
-                    "name": "Foo 1",
+                    "name": "Leno",
                     "number": "1",
-                    "county": "🇯🇲",
+                    "county": "🇩🇪",
+                    "position": "Goalkeeper"
+                },
+                {
+                    "name": "Tierney",
+                    "number": "3",
+                    "county": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
                     "position": "Defender"
                 },
                 {
-                    "name": "Foo 2",
-                    "number": "2",
-                    "county": "🇯🇲",
-                    "position": "Midfield"
+                    "name": "Luiz",
+                    "number": "23",
+                    "county": "🇧🇷",
+                    "position": "Defender"
                 },
                 {
-                    "name": "Foo 3",
-                    "number": "1",
-                    "county": "🇯🇲",
-                    "position": "Striker"
+                    "name": "Saliba",
+                    "number": "4",
+                    "county": "🇫🇷",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Bellerin",
+                    "number": "2",
+                    "county": "🇪🇸",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Gabriel",
+                    "number": "6",
+                    "county": "🇧🇷",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Kolasinac",
+                    "number": "31",
+                    "county": "🇧🇦",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Saka",
+                    "number": "7",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Özil",
+                    "number": "10",
+                    "county": "🇩🇪",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Torreira",
+                    "number": "11",
+                    "county": "🇺🇾",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Guendouzi",
+                    "number": "29",
+                    "county": "🇫🇷",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Xhaka",
+                    "number": "34",
+                    "county": "🇨🇭",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Pépé",
+                    "number": "19",
+                    "county": "🇨🇮",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Ceballios",
+                    "number": "8",
+                    "county": "🇪🇸",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Willian",
+                    "number": "12",
+                    "county": "🇧🇷",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Aubameyang",
+                    "number": "14",
+                    "county": "🇬🇦",
+                    "position": "Forward"
+                },
+                {
+                    "name": "Lacazette",
+                    "number": "9",
+                    "county": "🇫🇷",
+                    "position": "Forward"
                 }
             ]
         },
         {
             "id": 1,
-            "name": "Liverpool",
-            "manager": "Jürgen Klopp",
-            "arena": "Anfiled",
+            "name": "Chelsea",
+            "manager": "Lampard",
+            "arena": "Stamford Bridge",
             "players": [
                 {
-                    "name": "Loo 1",
+                    "name": "Arrizabalaga",
                     "number": "1",
-                    "county": "🇧🇧",
+                    "county": "🇪🇸",
+                    "position": "Goalkeeper"
+                },
+                {
+                    "name": "Chilwell",
+                    "number": "21",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
                     "position": "Defender"
                 },
                 {
-                    "name": "Loo 2",
-                    "number": "2",
-                    "county": "🇧🇧",
-                    "position": "Midfield"
+                    "name": "Zouma",
+                    "number": "15",
+                    "county": "🇫🇷",
+                    "position": "Defender"
                 },
                 {
-                    "name": "Loo 3",
+                    "name": "Silva",
+                    "number": "6",
+                    "county": "🇧🇷",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Azpilicueta",
+                    "number": "28",
+                    "county": "🇪🇸",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Alonso",
+                    "number": "3",
+                    "county": "🇪🇸",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Kovacic",
+                    "number": "17",
+                    "county": "🇭🇷",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Jorginho",
+                    "number": "5",
+                    "county": "🇮🇹",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Kanté",
+                    "number": "7",
+                    "county": "🇫🇷",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Mount",
+                    "number": "19",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Havertz",
+                    "number": "29",
+                    "county": "🇩🇪",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Ziyech",
+                    "number": "22",
+                    "county": "🇲🇦",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Werner",
+                    "number": "11",
+                    "county": "🇩🇪",
+                    "position": "Forward"
+                },
+                {
+                    "name": "Abraham",
+                    "number": "9",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Forward"
+                },
+                {
+                    "name": "Giroud",
+                    "number": "18",
+                    "county": "🇫🇷",
+                    "position": "Forward"
+                },
+                {
+                    "name": "Pulisic",
+                    "number": "10",
+                    "county": "🇺🇸",
+                    "position": "Forward"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Everton",
+            "manager": "Ancelotti",
+            "arena": "Goodison Park",
+            "players": [
+                {
+                    "name": "Pickford",
                     "number": "1",
-                    "county": "🇧🇧",
-                    "position": "Striker"
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Goalkeeper"
+                },
+                {
+                    "name": "Holgate",
+                    "number": "2",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Keane",
+                    "number": "3",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Coleman",
+                    "number": "23",
+                    "county": "🇮🇪",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Digne",
+                    "number": "12",
+                    "county": "🇫🇷",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Mina",
+                    "number": "13",
+                    "county": "🇨🇴",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Sigurdsson",
+                    "number": "10",
+                    "county": "🇮🇸",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Gomes",
+                    "number": "21",
+                    "county": "🇵🇹",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Allan",
+                    "number": "6",
+                    "county": "🇧🇷",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Doucouré",
+                    "number": "16",
+                    "county": "🇫🇷",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Rodríguez",
+                    "number": "19",
+                    "county": "🇨🇴",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Iwobi",
+                    "number": "17",
+                    "county": "🇳🇬",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Calwert-Lewin",
+                    "number": "9",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Forward"
+                },
+                {
+                    "name": "Walcott",
+                    "number": "11",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Forward"
+                },
+                {
+                    "name": "Richarlison",
+                    "number": "7",
+                    "county": "🇧🇷",
+                    "position": "Forward"
+                },
+                {
+                    "name": "Kean",
+                    "number": "27",
+                    "county": "🇮🇹",
+                    "position": "Forward"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Leicester",
+            "manager": "Rodgers",
+            "arena": "King Power Stadium",
+            "players": [
+                {
+                    "name": "Schmeichel",
+                    "number": "1",
+                    "county": "🇩🇰",
+                    "position": "Goalkeeper"
+                },
+                {
+                    "name": "Söyüncü",
+                    "number": "4",
+                    "county": "🇹🇷",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Evans",
+                    "number": "6",
+                    "county": "🇬🇧",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Pereira",
+                    "number": "21",
+                    "county": "🇵🇹",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Fuchs",
+                    "number": "28",
+                    "county": "🇦🇹",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Tielemans",
+                    "number": "8",
+                    "county": "🇧🇪",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Maddison",
+                    "number": "10",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Ndidi",
+                    "number": "25",
+                    "county": "🇳🇬",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Barnes",
+                    "number": "15",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Mendy",
+                    "number": "24",
+                    "county": "🇫🇷",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Vardy",
+                    "number": "9",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Forward"
+                },
+                {
+                    "name": "Pérez",
+                    "number": "17",
+                    "county": "🇪🇸",
+                    "position": "Forward"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Liverpool",
+            "manager": "Klopp",
+            "arena": "Anfiled",
+            "players": [
+                {
+                    "name": "Alisson",
+                    "number": "1",
+                    "county": "🇧🇷",
+                    "position": "Goalkeeper"
+                },
+                {
+                    "name": "Van Dijk",
+                    "number": "4",
+                    "county": "🇳🇱",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Gomez",
+                    "number": "12",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Robertson",
+                    "number": "26",
+                    "county": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Alexander-Arnold",
+                    "number": "66",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Fabinho",
+                    "number": "3",
+                    "county": "🇧🇷",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Wijnaldum",
+                    "number": "5",
+                    "county": "🇳🇱",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Keita",
+                    "number": "8",
+                    "county": "🇬🇳",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Henderson",
+                    "number": "14",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Thiago",
+                    "number": "6",
+                    "county": "🇪🇸",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Firminho",
+                    "number": "9",
+                    "county": "🇧🇷",
+                    "position": "Forward"
+                },
+                {
+                    "name": "Mané",
+                    "number": "10",
+                    "county": "🇸🇳",
+                    "position": "Forward"
+                },
+                {
+                    "name": "Salah",
+                    "number": "11",
+                    "county": "🇪🇬",
+                    "position": "Forward"
+                },
+                {
+                    "name": "Jota",
+                    "number": "20",
+                    "county": "🇵🇹",
+                    "position": "Forward"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Manchester City",
+            "manager": "Guardiola",
+            "arena": "Etihad Stadium",
+            "players": [
+                {
+                    "name": "Ederson",
+                    "number": "31",
+                    "county": "🇧🇷",
+                    "position": "Goalkeeper"
+                },
+                {
+                    "name": "Mendy",
+                    "number": "22",
+                    "county": "🇫🇷",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Aké",
+                    "number": "6",
+                    "county": "🇳🇱",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Laporte",
+                    "number": "14",
+                    "county": "🇫🇷",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Walker",
+                    "number": "2",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Otamendi",
+                    "number": "30",
+                    "county": "🇦🇷",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Silva",
+                    "number": "20",
+                    "county": "🇵🇹",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Fernandinho",
+                    "number": "25",
+                    "county": "🇧🇷",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "De Bruyne",
+                    "number": "17",
+                    "county": "🇧🇪",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Gündogan",
+                    "number": "8",
+                    "county": "🇩🇪",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Rodri",
+                    "number": "16",
+                    "county": "🇪🇸",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Foden",
+                    "number": "47",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Sterling",
+                    "number": "7",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Forward"
+                },
+                {
+                    "name": "Jesus",
+                    "number": "9",
+                    "county": "🇧🇷",
+                    "position": "Forward"
+                },
+                {
+                    "name": "Agüero",
+                    "number": "10",
+                    "county": "🇦🇷",
+                    "position": "Forward"
+                },
+                {
+                    "name": "Mahrez",
+                    "number": "26",
+                    "county": "🇩🇿",
+                    "position": "Forward"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Manchester United",
+            "manager": "Solskjaer",
+            "arena": "Old Trafford",
+            "players": [
+                {
+                    "name": "De Gea",
+                    "number": "1",
+                    "county": "🇪🇸",
+                    "position": "Goalkeeper"
+                },
+                {
+                    "name": "Nilsson-Lindelöf",
+                    "number": "2",
+                    "county": "🇸🇪",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Bailly",
+                    "number": "3",
+                    "county": "🇨🇮",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Jones",
+                    "number": "4",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Maguire",
+                    "number": "5",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Shaw",
+                    "number": "23",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Wan-Bissaka",
+                    "number": "29",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Williams",
+                    "number": "53",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Pogba",
+                    "number": "6",
+                    "county": "🇫🇷",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Mata",
+                    "number": "8",
+                    "county": "🇪🇸",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Lingaard",
+                    "number": "14",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Fred",
+                    "number": "17",
+                    "county": "🇧🇷",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Fernandes",
+                    "number": "18",
+                    "county": "🇵🇹",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "James",
+                    "number": "21",
+                    "county": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Matic",
+                    "number": "31",
+                    "county": "🇷🇸",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "McTominay",
+                    "number": "39",
+                    "county": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Van Der Beek",
+                    "number": "39",
+                    "county": "🇳🇱",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Martial",
+                    "number": "9",
+                    "county": "🇫🇷",
+                    "position": "Forward"
+                },
+                {
+                    "name": "Rashford",
+                    "number": "10",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Forward"
+                },
+                {
+                    "name": "Greenwood",
+                    "number": "11",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Forward"
+                },
+                {
+                    "name": "Cavani",
+                    "number": "7",
+                    "county": "🇺🇾",
+                    "position": "Forward"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Tottenham",
+            "manager": "Mourinho",
+            "arena": "Tottenham Hotspur Stadium",
+            "players": [
+                {
+                    "name": "Lloris",
+                    "number": "1",
+                    "county": "🇫🇷",
+                    "position": "Goalkeeper"
+                },
+                {
+                    "name": "Doherty",
+                    "number": "2",
+                    "county": "🇮🇪",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Anderweireld",
+                    "number": "4",
+                    "county": "🇧🇪",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Davies",
+                    "number": "33",
+                    "county": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Aurier",
+                    "number": "24",
+                    "county": "🇨🇮",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Höjbjerg",
+                    "number": "5",
+                    "county": "🇩🇰",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Winks",
+                    "number": "8",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Sissoko",
+                    "number": "17",
+                    "county": "🇫🇷",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Lo Celso",
+                    "number": "18",
+                    "county": "🇦🇷",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Alli",
+                    "number": "20",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Son",
+                    "number": "7",
+                    "county": "🇰🇷",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Kane",
+                    "number": "10",
+                    "county": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                    "position": "Forward"
+                },
+                {
+                    "name": "Moura",
+                    "number": "27",
+                    "county": "🇧🇷",
+                    "position": "Forward"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "name": "Barcelona",
+            "manager": "Koeman",
+            "arena": "Camp Nou",
+            "players": [
+                {
+                    "name": "Ter Stegen",
+                    "number": "1",
+                    "county": "🇩🇪",
+                    "position": "Goalkeeper"
+                },
+                {
+                    "name": "Alba",
+                    "number": "18",
+                    "county": "🇪🇸",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Lenglet",
+                    "number": "15",
+                    "county": "🇫🇷",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Piqué",
+                    "number": "3",
+                    "county": "🇪🇸",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Semedo",
+                    "number": "3",
+                    "county": "🇵🇹",
+                    "position": "Defender"
+                },
+                {
+                    "name": "De Jong",
+                    "number": "21",
+                    "county": "🇳🇱",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Busquets",
+                    "number": "5",
+                    "county": "🇪🇸",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Pjanic",
+                    "number": "8",
+                    "county": "🇧🇦",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Vidal",
+                    "number": "2",
+                    "county": "🇨🇱",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Coutinho",
+                    "number": "14",
+                    "county": "🇧🇷",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Fati",
+                    "number": "31",
+                    "county": "🇪🇸",
+                    "position": "Forward"
+                },
+                {
+                    "name": "Griezmann",
+                    "number": "7",
+                    "county": "🇫🇷",
+                    "position": "Forward"
+                },
+                {
+                    "name": "Messi",
+                    "number": "10",
+                    "county": "🇦🇷",
+                    "position": "Forward"
+                },
+                {
+                    "name": "Suarez",
+                    "number": "9",
+                    "county": "🇺🇾",
+                    "position": "Forward"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "name": "Real Madrid",
+            "manager": "Zidane",
+            "arena": "Santiago Bernabéu",
+            "players": [
+                {
+                    "name": "Courtois",
+                    "number": "1",
+                    "county": "🇧🇪",
+                    "position": "Goalkeeper"
+                },
+                {
+                    "name": "Mendy",
+                    "number": "23",
+                    "county": "🇫🇷",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Varane",
+                    "number": "5",
+                    "county": "🇫🇷",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Ramos",
+                    "number": "4",
+                    "county": "🇪🇸",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Carvajal",
+                    "number": "2",
+                    "county": "🇪🇸",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Marcelo",
+                    "number": "12",
+                    "county": "🇧🇷",
+                    "position": "Defender"
+                },
+                {
+                    "name": "Modric",
+                    "number": "10",
+                    "county": "🇭🇷",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Casemiro",
+                    "number": "14",
+                    "county": "🇧🇷",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Kroos",
+                    "number": "8",
+                    "county": "🇩🇪",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Valverde",
+                    "number": "15",
+                    "county": "🇺🇾",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Ödegaard",
+                    "number": "21",
+                    "county": "🇳🇴",
+                    "position": "Midfielder"
+                },
+                {
+                    "name": "Hazard",
+                    "number": "7",
+                    "county": "🇧🇪",
+                    "position": "Forward"
+                },
+                {
+                    "name": "Benzema",
+                    "number": "9",
+                    "county": "🇫🇷",
+                    "position": "Forward"
+                },
+                {
+                    "name": "Junior",
+                    "number": "25",
+                    "county": "🇧🇷",
+                    "position": "Forward"
+                },
+                {
+                    "name": "Asensio",
+                    "number": "20",
+                    "county": "🇪🇸",
+                    "position": "Forward"
                 }
             ]
         }
