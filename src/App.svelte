@@ -1,4 +1,8 @@
 <style>
+:global(body) {
+    background: #ede7f6;
+    transition: background-color 0.3s;
+}
 main {
     text-align: center;
     padding: 1em;
