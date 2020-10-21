@@ -38,10 +38,11 @@ onMount(async () => {
 
 {#if !$gameOngoing}
     <GameOver />
+    <p class="scorecard">Score: {$score}</p>
 {:else if teams}
     <h1>Team {$round + 1} of {teams.length}</h1>
+    <p class="scorecard">Score: {$score}</p>
     <Team team="{teams[$round]}" noOfTeams="{teams.length}" />
 {:else}
     <h3>Loading teams data</h3>
 {/if}
-<p class="scorecard">Score: {$score}</p>

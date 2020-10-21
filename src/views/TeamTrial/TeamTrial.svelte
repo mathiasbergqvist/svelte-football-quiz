@@ -1,6 +1,7 @@
 <script>
 import { onMount } from 'svelte';
 import Team from '../../components/Team/Team.svelte';
+import { getAuthHeaders } from '../../auth';
 export let id;
 
 let team = null;
