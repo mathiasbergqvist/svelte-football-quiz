@@ -1,7 +1,10 @@
 <style>
 h2 {
-    font-size: 2rem;
-    font-weight: 400;
+    color: #ff3e00;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 100;
+    margin-bottom: 50px;
 }
 form {
     display: flex;
@@ -32,6 +35,10 @@ form {
 .button-wrapper {
     width: 350px;
     margin: 0 auto;
+}
+.player-number {
+    font-weight: 600;
+    font-size: 18px;
 }
 </style>
 
@@ -137,7 +144,9 @@ const getInputStyling = (shouldStyle, value, answer) => {
         <div class="players-container">
             {#each team.players as player, i}
                 <div class="form-input">
-                    <label for="{`player-${i}`}">{player.number}
+                    <label for="{`player-${i}`}"><span
+                            class="player-number"
+                        >{`#${player.number} | `}</span>
                         <span>{player.county}</span>
                         {player.position}</label>
                     <TextField
