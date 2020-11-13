@@ -6,8 +6,8 @@ span {
 
 <script>
 import { score, round } from '../../store';
-import { navigate } from 'svelte-routing';
 import { getAuthHeaders } from '../../auth';
+import { goto } from '@sveltech/routify';
 
 let playerName = '';
 
@@ -34,7 +34,7 @@ const submitScore = () => {
     })
         .then((res) => {
             clearGameBoard();
-            navigate('/scoreboard', { replace: true });
+            $goto('scoreboard');
         })
         .catch((e) => {
             clearGameBoard();
@@ -44,7 +44,7 @@ const submitScore = () => {
 
 const navigateHome = () => {
     clearGameBoard();
-    navigate('/', { replace: true });
+    $goto('index');
 };
 </script>
 
