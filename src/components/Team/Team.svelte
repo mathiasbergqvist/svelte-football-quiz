@@ -90,12 +90,12 @@ const startNextRound = () => {
     }
 };
 
-const getInputStyling = (shouldStyle, value, player) => {
+const getInputStyling = (shouldStyle, value, answer) => {
     if (!shouldStyle) {
         return '';
     }
 
-    if (value !== null && player !== null && isCorrectSpelling(value, player)) {
+    if (value !== null && answer !== null && isCorrectSpelling(value, answer)) {
         return 'border: 4px solid #64dd17; background: #76ff03';
     }
 
@@ -128,7 +128,7 @@ const getInputStyling = (shouldStyle, value, player) => {
                     disabled="{correctionMode}"
                 />
                 {#if correctionMode}
-                    <div style="{getInputStyling(correctionMode, answerManager, team.manager)}">
+                    <div style="{getInputStyling(correctionMode, answerManager, team.arena)}">
                         {team.arena}
                     </div>
                 {/if}
