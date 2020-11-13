@@ -36,11 +36,10 @@ form {
 </style>
 
 <script>
-import { navigate } from 'svelte-routing';
-
 import { gameOngoing, round, score } from '../../store';
 import { correctTeamScore, isCorrectSpelling } from './helpers';
 import { TextField, Button } from 'smelte';
+import { goto } from '@sveltech/routify';
 
 export let team;
 export let noOfTeams;
@@ -55,7 +54,7 @@ const handleSubmit = (e) => {
     e.preventDefault();
     if (correctionMode) {
         if (isTrial) {
-            navigate('/trial', { replace: true });
+            $goto('trial');
         } else {
             startNextRound();
         }

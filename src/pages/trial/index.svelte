@@ -7,9 +7,9 @@ section {
 
 <script>
 import { onMount } from 'svelte';
-import { navigate } from 'svelte-routing';
 import { List } from 'smelte';
 import { getAuthHeaders } from '../../auth';
+import { goto } from '@sveltech/routify';
 
 let teams = [];
 
@@ -22,8 +22,8 @@ onMount(async () => {
     teams = await res.json();
 });
 
-const startTrial = (id) => {
-    navigate(`/trial/${id}`, { replace: true });
+const startTrial = (teamId) => {
+    $goto(`/trial/:id`, { id: teamId });
 };
 </script>
 
