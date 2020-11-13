@@ -18,17 +18,23 @@ const isCorrectArena = (answerArena, team) => isCorrectSpelling(answerArena, tea
 
 export const correctTeamScore = (answerManager, answerArena, answerPlayers, team) => {
     let score = 0;
-    if (isCorrectManager(answerManager, team)) {
-        score += CORRECT_ANSWER_POINTS;
+    if (answerManager !== null) {
+        if (isCorrectManager(answerManager, team)) {
+            score += CORRECT_ANSWER_POINTS;
+        }
     }
 
-    if (isCorrectArena(answerArena, team)) {
-        score += CORRECT_ANSWER_POINTS;
+    if (answerArena !== null) {
+        if (isCorrectArena(answerArena, team)) {
+            score += CORRECT_ANSWER_POINTS;
+        }
     }
 
     answerPlayers.forEach((player, i) => {
-        if (isCorrectPlayer(player, team.players[i].name)) {
-            score += CORRECT_ANSWER_POINTS;
+        if (player !== null) {
+            if (isCorrectPlayer(player, team.players[i].name)) {
+                score += CORRECT_ANSWER_POINTS;
+            }
         }
     });
 

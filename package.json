@@ -1,6 +1,6 @@
 {
     "name": "svelte-app",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "scripts": {
         "dev": "routify -c my-server",
         "my-server": "rollup -c -w",

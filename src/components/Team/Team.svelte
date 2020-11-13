@@ -54,7 +54,7 @@ const handleSubmit = (e) => {
     e.preventDefault();
     if (correctionMode) {
         if (isTrial) {
-            $goto('trial');
+            $goto('/trial');
         } else {
             startNextRound();
         }
@@ -63,7 +63,7 @@ const handleSubmit = (e) => {
     }
 };
 
-const correctScore = (e) => {
+const correctScore = () => {
     const teamScore = correctTeamScore(answerManager, answerArena, answerPlayers, team);
 
     if (!isTrial) {
@@ -95,23 +95,11 @@ const getInputStyling = (shouldStyle, value, player) => {
         return '';
     }
 
-    if (value !== undefined && player !== undefined && isCorrectSpelling(value, player)) {
+    if (value !== null && player !== null && isCorrectSpelling(value, player)) {
         return 'border: 4px solid #64dd17; background: #76ff03';
     }
 
     return 'border: 4px solid #bf360c; background: #d84315;';
-};
-
-const getBorderTheme = (shouldStyle, value, player) => {
-    if (!shouldStyle) {
-        return 'secondary';
-    }
-
-    if (value !== undefined && player !== undefined && isCorrectSpelling(value, player)) {
-        return 'success';
-    }
-
-    return 'error';
 };
 </script>
 
