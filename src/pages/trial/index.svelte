@@ -1,7 +1,10 @@
 <style>
 section {
-    width: 1200px;
+    width: 800px;
     margin: 0 auto;
+}
+li {
+    margin-bottom: 15px;
 }
 </style>
 
@@ -10,6 +13,7 @@ import { onMount } from 'svelte';
 import { List } from 'smelte';
 import { getAuthHeaders } from '../../auth';
 import { goto } from '@sveltech/routify';
+import { Button } from 'smelte';
 
 let teams = [];
 
@@ -31,12 +35,7 @@ const startTrial = (teamId) => {
     <h1>Team trial</h1>
     <List items="{teams}">
         <li slot="item" let:item="{team}">
-            <div
-                class="cursor-pointer p-4 border-alert-50 border my-2 border-solid"
-                on:click="{(e) => startTrial(team.id)}"
-            >
-                {team.name}
-            </div>
+            <Button on:click="{(e) => startTrial(team.id)}" block>{team.name}</Button>
         </li>
     </List>
 </section>
